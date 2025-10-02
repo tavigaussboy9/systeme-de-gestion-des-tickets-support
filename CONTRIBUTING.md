@@ -9,6 +9,10 @@ Merci de votre intérêt pour contribuer à notre projet! Voici quelques directi
 4. Testez vos modifications.
 5. Soumettez une pull request.
 
+## Soumettre des demandes de fonctionnalités
+- Si vous souhaitez suggérer une nouvelle fonctionnalité, ouvrez une issue avant de commencer le développement.
+- Décrivez clairement votre idée et les raisons pour lesquelles elle est utile.
+
 ## Règles de codage
 - Suivez les conventions de style du projet.
 - Écrivez des tests pour vos nouvelles fonctionnalités ou corrections de bogues.
