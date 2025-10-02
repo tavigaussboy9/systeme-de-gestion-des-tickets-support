@@ -10,6 +10,9 @@ services:
     restart: unless-stopped
     environment:
       - NODE_ENV=production
+    networks:
+      - default
+      - monitoring_network
 
   user_service:
     build: ./services/user
@@ -18,6 +21,9 @@ services:
     restart: unless-stopped
     environment:
       - NODE_ENV=production
+    networks:
+      - default
+      - monitoring_network
 
   notification_service:
     build: ./services/notification
@@ -28,6 +34,7 @@ services:
       - NODE_ENV=production
     networks:
       - default
+      - monitoring_network
 
   analysis_service:
     build: ./services/analysis
@@ -36,6 +43,9 @@ services:
     restart: unless-stopped
     environment:
       - NODE_ENV=production
+    networks:
+      - default
+      - monitoring_network
 
 networks:
   default:
