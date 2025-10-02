@@ -27,7 +27,7 @@ services:
     environment:
       - NODE_ENV=production
     networks:
-      - monitoring_network
+      - default
 
   analysis_service:
     build: ./services/analysis
