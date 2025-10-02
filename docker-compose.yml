@@ -8,24 +8,32 @@ services:
     depends_on:
       - user_service
     restart: unless-stopped
+    environment:
+      - NODE_ENV=production
 
   user_service:
     build: ./services/user
     ports:
       - '8002:80'
     restart: unless-stopped
+    environment:
+      - NODE_ENV=production
 
   notification_service:
     build: ./services/notification
     ports:
       - '8003:80'
     restart: unless-stopped
+    environment:
+      - NODE_ENV=production
 
   analysis_service:
     build: ./services/analysis
     ports:
       - '8004:80'
     restart: unless-stopped
+    environment:
+      - NODE_ENV=production
 
 networks:
   default:
