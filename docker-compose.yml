@@ -26,6 +26,8 @@ services:
     restart: unless-stopped
     environment:
       - NODE_ENV=production
+    networks:
+      - monitoring_network
 
   analysis_service:
     build: ./services/analysis
@@ -37,4 +39,6 @@ services:
 
 networks:
   default:
+    driver: bridge
+  monitoring_network:
     driver: bridge
